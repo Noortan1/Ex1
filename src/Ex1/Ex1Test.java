@@ -36,15 +36,37 @@ public class Ex1Test {
         }
     }
 
-    @Test
-    public void int2NumberTest() {
-        // implement this test
 
-    }
+
+
 
     @Test
     public void maxIndexTest() {
         // implement this test
+        assertEquals( ,Ex1.maxIndex("1b","101b2","7BbG"));
+        assertEquals(5 ,Ex1.maxIndex("101b2"));
+        assertEquals(5 ,Ex1.maxIndex("101b2"));
+        assertEquals(5 ,Ex1.maxIndex("101b2"));
+
+    }
+
+    @Test
+    public void number2IntTest() {
+        assertEquals(5 ,Ex1.number2Int("101b2"));
+        assertEquals(-1 ,Ex1.number2Int("0bA"));
+        assertEquals(5 ,Ex1.number2Int("b1"));
+        assertEquals(123 ,Ex1.number2Int("123"));
+    }
+
+    @Test
+    public void isNumberTest() {
+
+    }
+
+    @Test
+    public void int2Number() {
+
+        }
     }
 
     // Add additional test functions - test as much as you can.
