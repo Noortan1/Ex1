@@ -19,16 +19,33 @@ public class Ex1Main {
             num1 = sc.next();
             if (!num1.equals("quit")) {
                 // add your code here
-               Ex1.number2Int(num1);
+                boolean lal = Ex1.isNumber(num1);
+               int ans= Ex1.number2Int(num1);
+               System.out.println("num1= " + num1 +" is number: " + lal + ", value= " + ans );
+                System.out.println("Enter a string as number#2 (or \"quit\" to end the program):");
+                boolean nan = Ex1.isNumber(num2);
+                int answer= Ex1.number2Int(num2);
+                System.out.println("num1= " + num2 +" is number: " + nan + ", value= " + answer );
+               System.out.println("Enter a string as number#2 (or \"quit\" to end the program):");
+               System.out.println("Enter a base for output: (a number [2,16] \n");
+               int base = sc.nextInt();
+               int hebur = ans+answer;
+               String Hebur= Ex1.int2Number(hebur,base );
 
-               
-               
+                System.out.println( num1 + " + " + num2 + "=" + Hebur );
+                int multiplication=ans*answer;
+                System.out.println( num1 + " * " + num2 + "=" + multiplication);
+
+
+
+
             }
 
+
+        }
 
         System.out.println("quiting now...");
 
         sc.close();
     }
-}
 }

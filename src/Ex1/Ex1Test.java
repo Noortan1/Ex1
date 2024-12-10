@@ -37,36 +37,44 @@ public class Ex1Test {
     }
 
 
-
-
-
     @Test
     public void maxIndexTest() {
         // implement this test
-        assertEquals( ,Ex1.maxIndex("1b","101b2","7BbG"));
-        assertEquals(5 ,Ex1.maxIndex("101b2"));
-        assertEquals(5 ,Ex1.maxIndex("101b2"));
-        assertEquals(5 ,Ex1.maxIndex("101b2"));
+        assertEquals(2 ,Ex1.maxIndex(new String [] {"1b","101b2","7BbG"}));
+        assertEquals(2 ,Ex1.maxIndex(new String[] {"101b2","7Ab16","261b8"}));
+        assertEquals(1 ,Ex1.maxIndex(new String[]{"101b2","222","261b8"}));
 
     }
 
     @Test
     public void number2IntTest() {
         assertEquals(5 ,Ex1.number2Int("101b2"));
-        assertEquals(-1 ,Ex1.number2Int("0bA"));
-        assertEquals(5 ,Ex1.number2Int("b1"));
-        assertEquals(123 ,Ex1.number2Int("123"));
+        assertEquals(11 ,Ex1.number2Int("BbG"));
+        assertEquals(55 ,Ex1.number2Int("67b8"));
+        assertEquals(1 ,Ex1.number2Int("1"));
     }
 
     @Test
     public void isNumberTest() {
+        assertEquals(true ,Ex1.isNumber("101b2"));
+        assertEquals(true ,Ex1.isNumber("7BbG"));
+        assertEquals(false ,Ex1.isNumber(""));
+        assertEquals(false ,Ex1.isNumber("b1"));
+
+
 
     }
 
     @Test
-    public void int2Number() {
+    public void int2NumberTest() {
+        assertEquals("FbG" ,Ex1.int2Number(15,16));
+        assertEquals("1010b2" ,Ex1.int2Number(10, 2));
+        assertEquals("10000b2" ,Ex1.int2Number(16 , 2));
+        assertEquals("25b8" ,Ex1.int2Number(21 , 8));
 
-        }
+
+
+
     }
 
     // Add additional test functions - test as much as you can.

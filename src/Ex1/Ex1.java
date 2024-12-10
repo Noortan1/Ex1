@@ -19,7 +19,6 @@ import java.util.Objects;
  * You should implement the following static functions:
  */
 public class Ex1 {
-    int ans = -1;
     static String digits = "0123456789ABCDEFG";
 
     /**
@@ -32,19 +31,22 @@ public class Ex1 {
     public static int number2Int(String num) {
         int ans = -1;
 
+        if (!isNumber(num)) return ans;
+
         String[] part = num.split("b");
+        String number = part[0];
         int base;
         if (part.length == 1) {
-            return base = 10;
+            base = 10;
         } else {
             base = digits.indexOf(part[1]);
         }
 
         ans = 0;
-        for (int i = 0; i < num.length() - 2; i++) {
+        for (int i = 0; i < number.length(); i++) {
 
-            int value = digits.indexOf(num.charAt(i));
-            int power = num.length() - 3- i;
+            int value = digits.indexOf(number.charAt(i));
+            int power = number.length() -1- i;
             int result = value*(int) Math.pow(base,power);
             ans += result;
         }
@@ -111,7 +113,7 @@ public class Ex1 {
      * @return a String representing a number (in base) equals to num, or an empty
      *         String (in case of wrong input).
      */
-    public static String int2Number(int num, int base) { // int2Number(5, 2) => "101b2"
+    public static String int2Number(int num, int base) {
         String ans = "";
         // add your code here
 
@@ -119,11 +121,11 @@ public class Ex1 {
         int result = num;
         String top = "";
         while (result != 0) {
-            top = result % base + top;
+           top= digits.charAt(result % base) + top;
             result = result / base;
-        }
+        };
 
-        ans = top + "b" + base;
+        ans = top + "b" + digits.charAt(base);
         ////////////////////
         return ans;
     }
@@ -159,12 +161,13 @@ public class Ex1 {
         int ans = 0;
         // add your code here
         int maximum = 0;
-        for (int i = 0; i <= arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             int help = number2Int(arr[i]);
             if (maximum < help) {
-                help = maximum;
+                maximum = help;
                 ans = i;
             }
+
         }
 
         return ans;
