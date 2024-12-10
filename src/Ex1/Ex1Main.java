@@ -27,19 +27,21 @@ public class Ex1Main {
                 boolean nan = Ex1.isNumber(num2);
                 int answer= Ex1.number2Int(num2);
                 System.out.println("num1= " + num2 +" is number: " + nan + ", value= " + answer );
-               System.out.println("Enter a string as number#2 (or \"quit\" to end the program):");
-               System.out.println("Enter a base for output: (a number [2,16] \n");
-               int base = sc.nextInt();
-               int hebur = ans+answer;
-               String Hebur= Ex1.int2Number(hebur,base );
+                System.out.println("Enter a string as number#2 (or \"quit\" to end the program):");
 
-                System.out.println( num1 + " + " + num2 + "=" + Hebur );
+
+                System.out.println("Enter a base for output: (a number [2,16] \n");
+                int base = sc.nextInt();
+                int hebur = ans+answer;
+                String Hebur = Ex1.int2Number(hebur, base);
+                System.out.println(num1 + " + " + num2 + "=" + Hebur);
+
                 int multiplication=ans*answer;
-                System.out.println( num1 + " * " + num2 + "=" + multiplication);
+                String m = Ex1.int2Number(multiplication, base);
+                String Hebu= Ex1.int2Number(hebur,base );
+                System.out.println(num1 + " * " + num2 + "=" + m);
 
-
-
-
+                System.out.println("Max number over [" + num1 + "," + num2 + "," + Hebur + "," + m + "] is: "  + (hebur > multiplication ? Hebur : m));
             }
 
 
