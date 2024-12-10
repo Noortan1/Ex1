@@ -23,6 +23,7 @@ public class Ex1Main {
                int ans= Ex1.number2Int(num1);
                System.out.println("num1= " + num1 +" is number: " + lal + ", value= " + ans );
                 System.out.println("Enter a string as number#2 (or \"quit\" to end the program):");
+                num2 = sc.next();
                 boolean nan = Ex1.isNumber(num2);
                 int answer= Ex1.number2Int(num2);
                 System.out.println("num1= " + num2 +" is number: " + nan + ", value= " + answer );
