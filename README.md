@@ -1,10 +1,11 @@
-Hello, first of all,
-In this programming work, I focused on the topic of converting numbers in a certain base to a decimal base and vice versa.
-We will start by talking about Ex1.java, which consists of 5 instructions/functions that need to be worked on. First, number2Int, which gives some STRING, which consists of a number and a base, which needs to be converted to a number in base 10.
-By an appropriate function (from number systems lessons), multiplying the given number in the given base by a power that starts from 0 to the rightmost number, etc.,
-By the isNumber function that checks if the number is valid.
-The int2Number function's function is to take a number in a decimal base and convert it to the desired base.
-For equals it checks if two STRING are equal
-The last chapter in this chapter is to get a string containing numbers with bases. Its purpose is to check which is their structure. The maximum value. I used a loop each time adding 1, and starting from 0 to the length of the STRING. Starting from the first element and comparing it each time to the STRING element and taking the value that is larger each time.
-After this part, there is a part of the tests that checks the effectiveness of the first part. I made many changes that will be adapted to the tests.
-And the first part is the Ex1Main part, the most challenging part, which is designed to adapt it to the answers received in Ex1.Sol /
+In the programming task described, you focused on converting numbers between different bases, particularly from any given base to decimal (base 10) and vice versa. The program consists of multiple functions such as:
+
+number2Int: Converts a string representation of a number in a given base to a decimal number by iterating through each digit, multiplying by the base raised to the appropriate power.
+isNumber: Validates if the input string represents a valid number in the specified base.
+int2Number: Converts a decimal number to a string representation in a specified target base.
+equals: Compares two number strings to check if they are identical.
+GetMaxValue: Finds the highest numerical value from the digits in a number string, used to determine the base.
+Finally, you worked on test cases to ensure the program's correctness and adapted the Ex1Main function to fit the requirements.
+
+
+
