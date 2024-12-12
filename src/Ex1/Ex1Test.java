@@ -73,6 +73,13 @@ public class Ex1Test {
         assertEquals("25b8" ,Ex1.int2Number(21 , 8));
 
 
+    }
+    @Test
+    public void equalsTest(){
+        assertEquals(false ,Ex1.equals("101b2" ,"100b2"));
+        assertEquals(false ,Ex1.equals("FbG" ,"100b2"));
+        assertEquals(true ,Ex1.equals("100b2" ,"100b2"));
+        assertEquals(true ,Ex1.equals("10100b2" ,"20bA"));
 
 
     }
